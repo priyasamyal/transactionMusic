@@ -1,0 +1,88 @@
+<!--
+  Generated template for the CartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+
+        <ion-title text-left>
+            <img class="home-title" style="margin-left: 1em;" src="assets/imgs/logo.png" />
+        </ion-title>
+        <ion-buttons end class="header-icon">
+            <button ion-button icon-only (click)="onSearch()">
+                                    <ion-icon name="search" ></ion-icon>
+                            </button>
+            <button ion-button icon-only (click)="goToCart()">
+                                    <ion-icon name="cart"></ion-icon>
+                            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <div *ngIf="cartItem.length>0">
+        <ion-grid class="cart-container">
+            <ion-row class="title">_
+                <ion-col col-12>
+                    <span style="color: white" text-uppercase>checkout</span>
+                </ion-col>
+            </ion-row>
+            <ion-row class="heading">
+                <ion-col col-3>
+                    <span>Name</span>
+                </ion-col>
+                <ion-col col-6>
+                    <span>Item Price</span>
+                </ion-col>
+                <ion-col col-3>
+                    <span>Final Price</span>
+                </ion-col>
+            </ion-row>
+            <ion-row class="item-listing" *ngFor="let item of cartItem ; let i = index">
+                <ion-col col-3>
+                    <h4>{{item.beat_title}}
+                        <br><span style="position: absolute;bottom: 0px;">
+                                <span>Edit |&nbsp;</span>
+                        <span (click)='delete(item,i)'>Delete</span></span>
+                    </h4>
+                </ion-col>
+                <ion-col col-6>
+                    <h4>$ {{item.final_price}}</h4>
+                </ion-col>
+                <ion-col col-3>
+                    <h4>$ {{item.final_price}}</h4>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+
+        <ion-row class="footer-card">
+            <ion-col col-7>
+                <span>Subtotal ({{cartItem.length}}): <span> $ {{finalPrice}}</span></span>
+            </ion-col>
+            <ion-col col-5 (click)="presentPrompt()">
+                <button class="btn" text-capitalize item-end ion-button>Proceed to checkout</button>
+            </ion-col>
+        </ion-row>
+
+
+        <div text-center class="paypal" (click)="presentPrompt()">
+            <span>Pay with &nbsp; <img src="assets/imgs/paypal.png">
+                    <br>
+                    <span>Safe Payment Online</span>
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div *ngIf="cartItem.length==0">
+        <h4 text-center>No item added for Checkout</h4>
+    </div>
+
+</ion-content>

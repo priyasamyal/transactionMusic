@@ -1,0 +1,41 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+                     <img  class="home-title"  src="assets/imgs/menu.png" />
+                     <img class="home-title" style="margin-left: 1em;" src="assets/imgs/logo.png" />
+               </button>
+        <ion-buttons end class="header-icon">
+            <button ion-button icon-only (click)="onSearch()">
+                                <ion-icon name="search" ></ion-icon>
+                        </button>
+            <button ion-button icon-only (click)="goToCart()">
+                                <ion-icon name="cart"></ion-icon>
+                        </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="header" style="height: 13rem;text-align: center;">
+        <!-- <img src="assets/imgs/producer_bg.png" /> -->
+        <img class="cover_photo" [src]="common.beat_by_producer['producer_cover'][0]['producer_cover']" />
+        <div class="bottom" text-center> {{common.beat_by_producer['producer_cover'][0]['title']}}</div>
+    </div>
+    <ion-list no-padding class="listing" no-lines>
+        <ion-list-header>
+            ALL BEATS
+        </ion-list-header>
+
+        <ng-container *ngFor="let cat of common.beat_by_producer['beats_by_producer']">
+            <ion-item class="item-border" (click)="goToSingleTrackPage(cat)">
+                <ion-thumbnail item-start>
+                    <img [src]="cat.beat_cover">
+                </ion-thumbnail>
+                <h2 text-uppercase>{{cat.beat}}</h2>
+                <p>{{cat.producers}}</p>
+                <ion-icon name="arrow-dropright-circle" item-right></ion-icon>
+            </ion-item>
+        </ng-container>
+
+    </ion-list>
+</ion-content>

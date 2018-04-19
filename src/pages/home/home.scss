@@ -1,0 +1,111 @@
+page-home {
+    .home-title {
+        height: 20px;
+    }
+    .header-icon {
+        font-size: 2rem;
+        color: white;
+        padding: 0px 13px 0px 0px;
+    }
+    ion-icon {
+        margin: 0px 5px 0px 0px;
+    }
+    .bottom {
+        position: absolute;
+        bottom: 8px;
+        padding: 4px;
+        background-color: rgba(32, 32, 33, 0.8);
+        width: 91%;
+        font-size: 10px;
+    }
+    .header-title {
+        position: absolute;
+        bottom: 16px;
+        font-size: 10px;
+        padding-left: 8px;
+        text-align: left;
+        h3 {
+            font-size: 14px;
+            margin: 0px;
+            line-height: 2px;
+        }
+    }
+    .content-md {
+        color: white;
+        background-color: #19cefb;
+        ion-grid {
+            padding-bottom: 1em;
+            padding-top: 1em;
+        }
+    }
+    .content-ios {
+        color: white;
+        background-color: #19cefb;
+        ion-grid {
+            padding-bottom: 1em;
+            padding-top: 1em;
+        }
+    }
+    // .label-md {
+    //     margin: 13px 5px 0px 0;
+    // }
+    // ion-grid {
+    //     ion-row {
+    //         ion-col {
+    //             img {
+    //                 height: 8em;
+    //                 width: 100%;
+    //             }
+    //         }
+    //     }
+    // }
+    ion-footer {
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 10;
+        display: block;
+        width: 100%;
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 1px;
+    }
+    ion-slides {
+        display: block;
+        width: 100%;
+        height: 14em;
+    }
+    .swiper-slide img {
+        width: auto;
+        max-width: 100%;
+        height: 12em;
+        max-height: 100%;
+    }
+    .swiper-pagination-bullet {
+        border-radius: 100%;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #19cefb;
+        opacity: 0.8;
+        pointer-events: auto;
+    }
+    ion-item-group {
+        display: block;
+        position: relative;
+        z-index: 0;
+    }
+    .item-md-base,
+    .item-divider-md-base .item-ios-base,
+    .item-divider-ios-base {
+        color: #fff;
+        background-color: #1b97b6;
+        font-size: 1.5em;
+        font-family: roboto !important;
+        text-align: center;
+    }
+    ion-item.item:hover {
+        background-color: color($colors, light);
+    }
+}

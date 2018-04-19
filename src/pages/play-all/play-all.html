@@ -1,0 +1,95 @@
+<!--
+  Generated template for the SingleTrackPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar hideBackButton="true">
+        <button ion-button menuToggle>
+                    <img  class="home-title"  src="assets/imgs/menu.png" />
+                     <img class="home-title" style="margin-left: 1em;" src="assets/imgs/logo.png" />
+               </button>
+        <ion-buttons end class="header-icon">
+            <button ion-button icon-only (click)="onSearch()">
+                                <ion-icon name="search" ></ion-icon>
+                        </button>
+            <button ion-button icon-only (click)="goToCart()">
+                                <ion-icon name="cart"></ion-icon>
+                        </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div *ngIf="selected_track.art!=undefined">
+        <ion-grid no-padding>
+
+            <ion-row>
+                <ion-col col-12 text-center>
+                    <img [src]="selected_track.art" class="cover-photo" />
+                </ion-col>
+            </ion-row>
+            <ion-row style=" margin-bottom: 2em;">
+
+                <ion-col col-10>
+                    <span class="music-name">{{selected_track.title}}  <img class="flag" src="assets/imgs/flag.png" /> <br><span  class="music-name-inner">{{selected_track.artist}}</span></span>
+                </ion-col>
+            </ion-row>
+            <!-- <audio-track #audioTrack [track]="currentTrack" [autoplay]="true" (onFinish)="onTrackFinished($event)"> -->
+            <audio-track #audioTrack [track]="currentTrack" (onFinish)="onTrackFinished($event)">
+                <ion-row style="margin-bottom: 1em;">
+                    <audio-track-progress-bar duration progress [audioTrack]="audioTrack" style="width: 100%; margin: 0 10px" class='slider'></audio-track-progress-bar>
+                </ion-row>
+                <ion-row style=" margin-bottom: 2em;">
+                    <ion-col col-4 text-right style="padding: 16px;">
+                        <img class="back_btn" (click)="back()" src="assets/imgs/back.png" />
+                    </ion-col>
+                    <ion-col col-4 text-center>
+                        <img *ngIf="is_pause" (click)="audioTrack.canPlay ? audioTrack.play() : next() ; onPlay()" class="play_btn" src="assets/imgs/play_big.png" />
+                        <img *ngIf="!is_pause" (click)="audioTrack.pause(); onPause() " class="play_btn" src="assets/imgs/pause.png" />
+
+                    </ion-col>
+                    <ion-col col-4 text-left style=" padding: 16px;">
+                        <img class="next_btn" (click)="next()" src="assets/imgs/next.png" />
+                    </ion-col>
+                </ion-row>
+            </audio-track>
+
+            <ion-row class="check-border">
+                <ion-col col-3 *ngFor="let file of beat_files">
+                    <span text-capitalize>{{file.file_type}}</span><br>
+                    <ion-item no-lines>
+                        <ion-label class="checkbox-title">{{'$'+file.price}}</ion-label>
+                        <ion-checkbox (ionChange)='selectItemForCart(file)' [checked]='file.is_selected' color="light"></ion-checkbox>
+                    </ion-item>
+                </ion-col>
+
+            </ion-row>
+            <ion-row text-center style="margin-bottom: 2em">
+                <ion-col col-6 (click)="AddToCart()">
+                    <button ion-button color="dark" style="color: white" round text-capitalize>Add To Cart</button>
+                </ion-col>
+                <ion-col col-6 (click)="goToCheckOut()">
+                    <button ion-button color="base" style="color: white" round text-capitalize>Checkout</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </div>
+
+    <ion-list class="music-list">
+        <ng-container *ngFor="let  i of playlist; let index = index">
+            <ion-item [class.activeHighlight]='checkActive(i)' (click)="chooseTrack(i,index)">
+                <h2>{{i.title}}</h2>
+                <p color='base'>{{i.artist}}</p>
+                <ion-icon name="podium" *ngIf="active_list==i" item-right></ion-icon>
+            </ion-item>
+        </ng-container>
+
+    </ion-list>
+
+</ion-content>

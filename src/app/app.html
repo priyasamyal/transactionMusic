@@ -1,0 +1,20 @@
+<ion-menu [content]="mycontent" persistent="true">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Filters</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button class="menu-label" ion-item menuClose *ngFor="let p of menuPages" (click)="openPage(p)">
+                 <!-- <ion-icon item-start [name]="p.icon"></ion-icon> -->
+                 <img class="menu-icon" [src]="p.icon" />
+                        {{p.title}}
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+
+
+<ion-nav [root]="rootPage" #mycontent></ion-nav>

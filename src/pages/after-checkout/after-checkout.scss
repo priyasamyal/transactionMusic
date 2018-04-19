@@ -1,0 +1,112 @@
+page-after-checkout {
+    .home-title {
+        height: 20px
+    }
+    .header-icon {
+        font-size: 2rem;
+        color: white;
+        padding: 0px 13px 0px 0px;
+    }
+    ion-icon {
+        margin: 0px 5px 0px 0px;
+    }
+    .content-md {
+        color: white;
+        background-color: #04BAE9;
+    }
+    .content-ios {
+        color: white;
+        background-color: #04BAE9;
+    }
+    .main {
+        .upper-main {
+            padding: 16%;
+            h4 {
+                font-family: roboto;
+                font-size: 2.3rem;
+            }
+        }
+        .main-inner {
+            background-color: #19CEFB;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            padding-left: 5%;
+            padding-right: 5%;
+            span {
+                font-family: roboto;
+                font-weight: 500;
+                span {
+                    font-weight: 400;
+                    font-size: 9px;
+                }
+            }
+            button {
+                background: #61A616;
+                height: 2em;
+                font-size: 12px;
+            }
+            ion-list {
+                ion-item {
+                    border-bottom: 1px solid #EDEDED !important;
+                    color: white;
+                    background-color: color($colors, base);
+                    .flag {
+                        height: 12px;
+                        width: 18px;
+                        margin-left: 5px;
+                    }
+                    .thumbnail-image {
+                        height: 2em;
+                        width: 2em;
+                    }
+                    h2 {
+                        font-size: 10px;
+                        font-weight: bold;
+                    }
+                    p {
+                        color: white;
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+    .item-md ion-thumbnail img {
+        width: 2em;
+        height: 2em;
+    }
+    .item-md ion-thumbnail {
+        min-width: 2em;
+        min-height: 2em;
+    }
+    .item-ios ion-thumbnail img {
+        width: 2em;
+        height: 2em;
+    }
+    .item-ios ion-thumbnail {
+        min-width: 2em;
+        min-height: 2em;
+    }
+    ion-app.md [padding] .scroll-content {
+        padding: 20px;
+    }
+    .toolbar-ios ion-title {
+        left: 0;
+        top: 0;
+        padding: 0 25px 1px;
+        padding-top: 0px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        pointer-events: none;
+    }
+    .toolbar-title-ios {
+        text-align: left;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: #fff;
+        pointer-events: auto;
+    }
+}

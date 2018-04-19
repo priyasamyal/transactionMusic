@@ -1,0 +1,140 @@
+page-checkout {
+    .home-title {
+        height: 20px;
+    }
+    .header-icon {
+        font-size: 2rem;
+        color: white;
+        padding: 0px 13px 0px 0px;
+    }
+    ion-icon {
+        margin: 0px 5px 0px 0px;
+    }
+    .grid {
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .cart-container {
+        border: 1px solid lightgray;
+        .title {
+            background: black;
+            padding: 3px;
+            font-family: roboto;
+        }
+        .heading {
+            border-bottom: 1px solid #ededed;
+            padding: 5px;
+            span {
+                font-size: 13px;
+                font-weight: bold;
+            }
+        }
+        .item-listing {
+            padding: 5px;
+            border-bottom: 1px solid #ededed;
+            h4 {
+                font-size: 11px;
+                font-weight: 500;
+                float: left;
+                span {
+                    color: #01ccea;
+                    font-size: 10px;
+                    float: left;
+                }
+            }
+        }
+    }
+    .footer-card {
+        height: 3.2em;
+        border-radius: 0px;
+        margin-top: 10%;
+        border: 1px solid lightgray;
+        background: #ededed !important;
+        ion-col {
+            align-self: center;
+        }
+        span {
+            font-size: 12px;
+            font-weight: 400;
+            span {
+                color: #db2525;
+            }
+        }
+        .btn {
+            position: inherit;
+            right: 19%;
+            background: #61a616;
+            color: white;
+            font-size: 8px;
+            height: 3em;
+            border-radius: 0px;
+        }
+    }
+    .paypal {
+        border: 1px solid #ededed;
+        padding: 4px;
+        margin-top: 10%;
+        span {
+            font-size: 17px;
+            font-weight: bold;
+            span {
+                color: darkgray;
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+        img {
+            height: 2.5rem;
+            width: 6em;
+        }
+    }
+    .toolbar-ios ion-title {
+        left: 0;
+        top: 0;
+        padding: 0 25px 1px;
+        padding-top: 0px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        pointer-events: none;
+    }
+    .toolbar-title-ios {
+        text-align: left;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: #fff;
+        pointer-events: auto;
+    }
+}
+
+.alert-md .alert-title {
+    font-size: 18px;
+    color: #19cefb;
+}
+
+.alert-md .alert-button {
+    text-align: right;
+    text-align: end;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #19cefb;
+    background-color: transparent;
+    margin: 0 8px 0 0;
+    padding: 10px;
+}

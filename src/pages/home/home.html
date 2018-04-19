@@ -1,0 +1,130 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <img  class="home-title"  src="assets/imgs/menu.png" />
+             <img class="home-title" style="margin-left: 1em;" src="assets/imgs/logo.png" />
+       </button>
+        <ion-buttons end class="header-icon">
+            <button ion-button icon-only (click)="onSearch()">
+                        <ion-icon name="search" ></ion-icon>
+                </button>
+            <button ion-button icon-only (click)="goToCart()">
+                        <ion-icon name="cart"></ion-icon>
+                </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-slides pager="true">
+        <ion-slide *ngFor="let slide of common.slider_images">
+            <img [src]="slide.file_path" />
+            <div class="header-title">
+                <h3>TransactionMusic Beats Marketplace</h3>
+
+                <p>
+                    Global eMarketplace for beat and instrumental sales. Producers start selling your beats today! Artists, we have beats of all genres from all over the world. Get your beats here today!
+                </p>
+            </div>
+        </ion-slide>
+
+    </ion-slides>
+
+
+    <!-- <div id='cssmenu'>
+        <ul>
+
+            <li class='active has-sub'><a href='#'><span style="font-size: 1.5em;">Filter</span></a>
+                <ul>
+
+                    <li class='has-sub' *ngFor="let f of filter_data"><a href='#'><span text-capitalize >{{f.name}}</span></a>
+                        <ul style="float: left !important; height: 200px !important;
+                    overflow-x: scroll;">
+                            <li class='has-sub' *ngFor="let term of f.sub_cat"><a href='#'><span> {{term.title}}</span></a>
+                                <ul>
+                                    <li><a href='#'><span>Show 10 results</span></a></li>
+                                    <li><a href='#'><span>Show 25 results</span></a></li>
+                                    <li class='last'><a href='#'><span>Show 100 results</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+            </li>
+
+        </ul>
+    </div> -->
+    <button ion-button color='dark' float-right (click)='filter()'>Filter</button>
+
+    <ion-item-group style="margin-top: 2em;">
+        <ion-item-divider color="base">Genre</ion-item-divider>
+        <ion-item *ngFor="let cat of common.genre_music" (click)="goToCategoryPage(cat)"> {{cat.title}}</ion-item>
+
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider color="base">Instruments</ion-item-divider>
+        <ion-item *ngFor="let i of common.instrument_cat" (click)="goToCategoryPage(i)">{{i.title}}</ion-item>
+    </ion-item-group>
+
+    <!-- <ion-label style="font-size: 14px;font-weight: bold;padding-left: 1em;margin-top: 3rem">
+        Genre
+    </ion-label> -->
+    <!-- <ion-grid>
+        <ion-row>
+            <ion-col col-4 *ngFor="let cat of common.genre_music">
+                <img [src]="cat.cover" (click)="goToCategoryPage(cat)" />
+                <div class="bottom">{{cat.title}}</div>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid> -->
+    <!-- <ion-label style="font-size: 14px;font-weight: bold;padding-left: 1em;">
+        Producers
+    </ion-label>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col-4 *ngFor="let p of common.producer_cat">
+                <img [src]="p.cover" (click)="goToCategoryPage(p)" />
+                <div class="bottom">{{p.title}}</div>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid> -->
+
+    <!-- <ion-label style="font-size: 14px;font-weight: bold;padding-left: 1em;">
+        Instruments
+    </ion-label>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col-4 *ngFor="let i of common.instrument_cat">
+                <img [src]="i.cover" (click)="goToCategoryPage(i)" />
+                <div class="bottom">{{i.title}}</div>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid> -->
+    <!-- <div>
+        <ion-label style="font-size: 14px;font-weight: bold;padding-left: 1em;">
+            Sounds Like
+        </ion-label>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col col-4 *ngFor="let s of common.sound_like_cat">
+                    <img [src]="s.cover" (click)="goToCategoryPage(s)" />
+                    <div class="bottom">{{s.title}}</div>
+                </ion-col>
+
+            </ion-row>
+        </ion-grid>
+    </div> -->
+
+</ion-content>
+<ion-footer *ngIf="!network_type">
+    No Connection
+</ion-footer>

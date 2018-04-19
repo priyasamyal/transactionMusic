@@ -1,0 +1,169 @@
+page-play-search {
+    .home-title {
+        height: 20px
+    }
+    .header-icon {
+        font-size: 2rem;
+        color: white;
+        padding: 0px 13px 0px 0px;
+    }
+    ion-icon {
+        margin: 0px 5px 0px 0px;
+    }
+    ion-grid {
+        .label-title {
+            font-size: 2.4rem !important;
+            font-weight: 500 !important;
+            font-family: roboto !important;
+        }
+        .cover-photo {
+            height: 12em;
+            width: 100%;
+        }
+        .music-name {
+            font-size: 2.4rem !important;
+            font-weight: 500 !important;
+            font-family: roboto !important;
+        }
+        .music-name-inner {
+            font-size: 1.5rem;
+            color: black;
+            font-weight: 500;
+            font-family: roboto;
+        }
+        .flag {
+            height: 16px;
+            width: 1em;
+            margin-left: 5px;
+        }
+        .play_btn {
+            height: 4em;
+            width: 4em;
+        }
+        .next_btn {
+            height: 2em;
+            width: 1.7em;
+        }
+        .back_btn {
+            height: 2em;
+            width: 1.7em;
+        }
+        .check-border {
+            border-top: 2px solid lightgray;
+            border-bottom: 3px solid lightgray;
+            margin-bottom: 2em;
+            padding-top: 9px;
+            .checkbox-title {
+                font-size: 12px;
+                font-weight: 500;
+                font-family: roboto;
+            }
+            span {
+                font-size: 12px;
+                color: gray;
+                font-weight: 500;
+                font-family: roboto;
+            }
+        }
+    }
+    .item.item-md .checkbox-md {
+        position: static;
+        display: block;
+        margin: 12px 14px 10px 4px;
+    }
+    .item-md {
+        padding-left: 0px;
+        padding-right: 0;
+        position: relative;
+        font-size: 1.6rem;
+        font-weight: normal;
+        text-transform: none;
+        color: #000;
+        background-color: #fff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .button-inner {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-family: roboto;
+    }
+    #myProgress {
+        width: 100%;
+        background-color: grey;
+    }
+    #myBar {
+        width: 29%;
+        height: 7px;
+        background-color: black;
+    }
+    .timer {
+        font-size: 12px;
+        font-weight: bold;
+        padding: 14px;
+    }
+    .audio-progress {
+        height: .6rem;
+        width: 100%;
+        background-color: black;
+        // background-color: #C0C0C0;
+    }
+    .audio-progress .bar {
+        height: 100%;
+        background-color: black;
+        // background-color: #E95F74;
+    }
+    #audio-progress-handle {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        margin-top: -5px;
+        margin-left: -10px;
+        width: 14px;
+        height: 14px;
+        // border: 4px solid #D3D5DF;
+        // border-top-color: #D3D5DF;
+        // border-right-color: #D3D5DF;
+        border: 4px solid black;
+        border-top-color: black;
+        border-right-color: black;
+        transform: rotate(45deg);
+        border-radius: 100%;
+        // background-color: #fff;
+        background-color: black;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+        cursor: pointer;
+    }
+    .draggable {
+        float: left;
+        margin: 0 10px 10px 0;
+    }
+    .item.item-ios .checkbox-ios {
+        position: static;
+        display: block;
+        margin: 8px 3px 8px -12px;
+    }
+}

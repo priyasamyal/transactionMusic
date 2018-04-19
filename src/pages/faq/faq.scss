@@ -1,0 +1,41 @@
+page-faq {
+    .home-title {
+        height: 20px;
+    }
+    .header-icon {
+        font-size: 2rem;
+        color: white;
+        padding: 0px 13px 0px 0px;
+        ion-icon {
+            margin: 0px 5px 0px 0px;
+        }
+    }
+    .label {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-left: 9px;
+        font-family: roboto !important;
+    }
+    .single-faq-title-wrapper {
+        padding-top: 10px;
+    }
+    .single-faq-content-wrapper {
+        -webkit-animation: fadi 1s 1;
+    }
+    @-webkit-keyframes fadi {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @-moz-keyframes fadi {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}

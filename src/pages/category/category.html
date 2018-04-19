@@ -1,0 +1,49 @@
+<ion-header>
+
+    <ion-navbar hideBackButton="true">
+        <button ion-button menuToggle>
+      <img class="home-title" src="assets/imgs/menu.png" />
+      <img class="home-title" style="margin-left: 1em;" src="assets/imgs/logo.png" />
+    </button>
+        <ion-buttons end class="header-icon">
+            <button ion-button icon-only (click)="onSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+            <button ion-button icon-only (click)="goToCart()">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div>
+
+
+        <button ion-button color='dark' float-right (click)='filter_cat()'>Filter</button>
+
+        <ion-list no-padding class="listing" no-lines>
+
+            <ng-container *ngFor="let cat of paginition_array">
+                <ion-item class="item-border" (click)="goToSingleTrackPage(cat)">
+                    <ion-thumbnail item-start>
+                        <img [src]="cat.beat_cover">
+                    </ion-thumbnail>
+                    <h2 text-uppercase>{{cat.beat_title}} </h2>
+                    <p>{{cat.producer}}{{cat[producer]}}</p>
+                    <ion-icon name="arrow-dropright-circle" item-right></ion-icon>
+                </ion-item>
+            </ng-container>
+
+        </ion-list>
+
+        <div class="paginition" *ngIf='paginition_array.length>0'>
+            <ion-icon *ngIf='current_page!=1' name="arrow-dropleft-circle" (click)='prevPage()'></ion-icon>
+            <ion-icon name="arrow-dropright-circle" (click)='nextPage()'></ion-icon>
+            <p>Displaying {{current_page}} of {{total_page}} Pages</p>
+            <p style="font-size: 10px;">{{records_per_page}} records per page</p>
+        </div>
+        <div *ngIf='paginition_array.length==0' class='err_msg'>
+            <h3>No beats found</h3>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,55 @@
+<!--
+  Generated template for the ContactUsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar hideBackButton="true">
+        <button ion-button menuToggle>
+                     <img  class="home-title"  src="assets/imgs/menu.png" />
+                      <img class="home-title" style="margin-left: 1em;" src="assets/imgs/logo.png" />
+               </button>
+        <ion-buttons end class="header-icon">
+            <button ion-button icon-only (click)="onSearch()">
+                                <ion-icon name="search" ></ion-icon>
+                        </button>
+            <button ion-button icon-only (click)="goToCart()">
+                                <ion-icon name="cart"></ion-icon>
+                        </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-label class='label' color='base'>CONTACT US</ion-label>
+
+    <ion-grid>
+        <ion-row class="email_row">
+            <ion-col col-12>
+                <ion-icon name="mail" color="base"></ion-icon>
+                <span> info@transactionmusic.com.</span>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-6>
+                <ion-input type="text" color="dark" [(ngModel)]='contact_data.name' placeholder="Name"></ion-input>
+            </ion-col>
+            <ion-col col-6>
+                <ion-input type="text" placeholder="email" [(ngModel)]='contact_data.email'></ion-input>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <ion-textarea rows='6' type="text" placeholder="Message" [(ngModel)]='contact_data.message'></ion-textarea>
+            </ion-col>
+        </ion-row>
+        <button ion-button color="base" class="btn" text-uppercase (click)="contact()">Submit</button>
+    </ion-grid>
+
+</ion-content>

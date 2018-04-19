@@ -1,0 +1,115 @@
+page-mycart {
+    .home-title {
+        height: 20px
+    }
+    .header-icon {
+        font-size: 2rem;
+        color: white;
+        padding: 0px 13px 0px 0px;
+    }
+    ion-icon {
+        margin: 0px 5px 0px 0px;
+    }
+    .grid {
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .cart-container {
+        border: 1px solid lightgray;
+        .title {
+            background: black;
+            padding: 3px;
+            font-family: roboto;
+        }
+        .heading {
+            border-bottom: 1px solid #EDEDED;
+            padding: 5px;
+            span {
+                font-size: 13px;
+                font-weight: bold;
+            }
+        }
+        .item-listing {
+            padding: 5px;
+            border-bottom: 1px solid #EDEDED;
+            h4 {
+                font-size: 11px;
+                font-weight: 500;
+                float: left;
+                span {
+                    color: #01ccea;
+                    font-size: 10px;
+                    float: left;
+                    position: absolute;
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+    .file_type {
+        font-size: 11px;
+        font-weight: 500;
+    }
+    .footer-card {
+        border: 1px solid lightgray;
+        height: 3.2em;
+        border-radius: 0px;
+        margin-top: 10%;
+        background: #EDEDED !important;
+        height: 100%;
+        ion-col {
+            align-self: center;
+        }
+        span {
+            font-size: 12px;
+            font-weight: 400;
+            span {
+                color: #DB2525;
+                font-weight: 500;
+            }
+        }
+        .btn {
+            position: inherit;
+            right: 19%;
+            background: #61A616;
+            color: white;
+            font-size: 8px;
+            height: 3em;
+            border-radius: 0px;
+        }
+    }
+    [padding] h5:first-child,
+    [padding] h6:first-child {
+        margin-top: 0rem;
+    }
+    .toolbar-ios ion-title {
+        left: 0;
+        top: 0;
+        padding: 0 25px 1px;
+        padding-top: 0px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        pointer-events: none;
+    }
+    .toolbar-title-ios {
+        text-align: left;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: #fff;
+        pointer-events: auto;
+    }
+}
